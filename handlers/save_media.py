@@ -1,5 +1,3 @@
-# (c) @LazyDeveloperr
-
 import asyncio
 from configs import Config
 from pyrogram import Client
@@ -49,14 +47,14 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
                 InlineKeyboardButton("Delete Batch", callback_data="closeMessage")
             ]])
         )
-        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=LazyDeveloperr_{str_to_b64(str(SaveMessage.id))}"
+        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=MRGFiletolink_{str_to_b64(str(SaveMessage.id))}"
         await editable.edit(
             f"**𝘉𝘢𝘵𝘤𝘩 𝘍𝘪𝘭𝘦𝘴 𝘚𝘵𝘰𝘳𝘦𝘥 𝘪𝘯 𝘮𝘺 𝘋𝘢𝘵𝘢𝘣𝘢𝘴𝘦!**\n\n𝙃𝙚𝙧𝙚 𝙞𝙨 𝙩𝙝𝙚 𝙋𝙚𝙧𝙢𝙖𝙣𝙚𝙣𝙩 𝙇𝙞𝙣𝙠 𝙤𝙛 𝙮𝙤𝙪𝙧 𝙛𝙞𝙡𝙚𝙨: {share_link} \n\n"
             f"𝘑𝘶𝘴𝘵 𝘊𝘭𝘪𝘤𝘬 𝘵𝘩𝘦 𝘭𝘪𝘯𝘬 𝘵𝘰 𝘨𝘦𝘵 𝘺𝘰𝘶𝘳 𝘧𝘪𝘭𝘦𝘴!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⚡️ Open Link ⚡️", url=share_link)],
-                 [InlineKeyboardButton("🔊ß⊕ts Channel", url="https://t.me/LazyDeveloper"),
-                  InlineKeyboardButton("🍿supp⊕rt gr⊕up", url="https://t.me/LazyDeveloperSupport")]]
+                [[InlineKeyboardButton("⚡️ Open Link", url=share_link)],
+                 [InlineKeyboardButton("📽 Movie Group", url="https://t.me/+1qBXuuZ8AxlkYWU9"),
+                  InlineKeyboardButton("🔞 Adult Group", url="https://t.me/+ZDAD_zcL_-wxMTll")]]
             ),
             disable_web_page_preview=True
         )
@@ -66,10 +64,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Open Link", url=share_link)]])
         )
-        # ✧ Bina soche smjhe code edit mt krna wrna error dhundne mei umrr beet jaayega.
-        # ✧ source code upgraded by The sir LazyDeveloper 
-        # ✧ Don't remove credit ✧ @LazyDeveloper ✧
-        if(Config.LAZY_MODE == True):
+        if(Config.LAZY_MODE == false):
             thumbs= message.video.thumbs[0]
             file_id= thumbs.file_id
             lazy_channel = int(Config.LAZY_CHANNEL)
